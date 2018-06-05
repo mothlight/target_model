@@ -1,0 +1,192 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+/*@import url('http://fonts.googleapis.com/css?family=Source+Code+Pro');*/
+@import url('http://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('http://fonts.googleapis.com/css?family=Cousine');
+
+@charset "utf-8";
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 10px;
+	white-space: normal;
+}
+p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 1px;
+	white-space: normal;
+}
+
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #181818;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	/* [disabled]text-decoration: none; */
+	background-color: #E9E9E9;
+}
+
+
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+.container {
+	width: 960px;
+	margin: 0 auto;
+	background-image: url(../images/treebarksm.jpg);
+	background-attachment: fixed;
+}
+
+header {
+	background-color: rgba(255,255,255,0.2);
+}
+
+.sidebar1 {
+	float: right;
+	/*position:fixed;
+	left: 975px;*/
+	width: 180px;
+	height: 380px;
+	background-color: #333333;
+	padding-bottom: 10px;
+	
+	color: rgba(255,255,255,1);
+}
+.content {
+	padding: 10px 10px;
+	width: 760px;
+	float: left;
+	background-color: rgba(255,255,255,0.8);
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 3px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 30px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 10px 10px 10px 15px;
+	display: block;
+	text-decoration: none;
+	background-color: #333333;
+	color: #CCC;
+}
+ul.nav a:hover, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #666666;
+	color: #FFF;
+}
+ul.nav a:active{
+    background-color: #666666;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+footer {
+	padding: 10px 0;
+	background-color: rgba(204,204,204,0.6);
+	position: relative;
+	clear: both;
+	font-size: smaller;	
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+.container .content h1 {
+	font-size: 36px;
+	font-weight: 500;
+	font-family: 'Bree Serif', serif;
+}
+.container .content h2 {
+	font-size: 22px;
+	font-weight: 300;
+	font-family: 'Bree Serif', serif;
+}
+.container .content h3 {
+	font-size: 18px;
+	font-weight: 200;
+	font-family: 'Bree Serif', serif;
+}
+
+body#home a#homenav,
+body#download a#downloadnav,
+body#manual a#manualnav,
+body#biblio a#biblionav {
+	color: #000;
+	background: #930;
+	background-color: rgba(210,210,210,1);
+	font-weight: bolder;
+}
+.namelistlong {
+	font-family: 'Cousine', sans-serif;
+	font-weight: 500;
+	font-size: smaller;
+}
+.code{
+/*	font-family: 'Cousine', sans-serif;
+	font-weight: 500;*/
+}
+.filename{
+	font-style:italic	
+}
+.container header {
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 46px;
+	/*font-style: italic;*/
+	font-weight: 900;
+	color: rgba(14,14,14,1);
+	text-shadow: -3px -3px 2px rgba(160,160,160,1);
+}
+table, th, td {
+   border: 1px solid green;
+}
+table {
+    border-collapse: collapse;
+	width: 100%;
+}
+th {
+    height: 40px;
+    background-color: green;
+    color: white;
+}
+td {
+    text-align: left;
+    height: 40px;
+    vertical-align: top;
+	padding: 5px;
+}
+tr a{
+	display:block
+}
+
